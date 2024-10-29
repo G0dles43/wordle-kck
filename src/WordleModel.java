@@ -11,10 +11,11 @@ public class WordleModel {
     private String wordToGuess;
     private int attempts = 0;
     private final int maxAttempts = 5;
+    private WordleWordProvider wordProvider;
 
     public WordleModel() {
-        Random generator = new Random();
-        this.wordToGuess = words[generator.nextInt(words.length)].toUpperCase();
+        this.wordProvider = new WordleWordProvider();
+        this.wordToGuess = wordProvider.fetchRandomWord();
     }
 
     public boolean guessWord(String word) {
@@ -49,6 +50,7 @@ public class WordleModel {
                 hint.append(colorHint(CZERWONY, letter));
                 updateAlphabetColor(letter, CZERWONY);
             }
+            System.out.println(pomWordToGuess);
         }
         return hint;
     }

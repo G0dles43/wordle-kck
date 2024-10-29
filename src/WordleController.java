@@ -13,11 +13,11 @@ public class WordleController {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            view.displayMessage("Podaj 5-literowe słowo: ");
+            view.displayMessage("Input 5-letter word: ");
             String word = scanner.nextLine().toUpperCase();
 
             if (word.length() != 5) {
-                view.displayMessage("Podaj słowo składające się z dokładnie 5 liter.");
+                view.displayMessage("Input word with exactly 5 letters!.");
                 continue;
             }
 

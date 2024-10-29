@@ -12,10 +12,10 @@ public class WordleView {
     }
 
     public void displayWinMessage() {
-        System.out.println("Brawo, wygrałeś!");
+        System.out.println("Good job, you win!");
     }
 
     public void displayLoseMessage(String wordToGuess) {
-        System.out.println("Przegrałeś! Słowo które było odgadnięcia to: " + wordToGuess);
+        System.out.println("Defeat! Word to guess: " + wordToGuess);
     }
 }
